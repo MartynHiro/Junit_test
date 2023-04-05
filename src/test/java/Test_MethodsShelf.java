@@ -2,9 +2,9 @@ import org.junit.jupiter.api.*;
 
 import java.util.Calendar;
 
-class Test_MethodsShelf {
-    static long startTime;
-    static int testCounter = 0;
+class TestMethodsShelf {
+    static private long startTime;
+    static private int testCounter = 0;
 
     @BeforeAll
     public static void beginning() {
@@ -24,7 +24,7 @@ class Test_MethodsShelf {
     }
 
     @Test
-    void test_isNumberCorrect() {
+    public void testIsNumberCorrect() {
         String[] products = {
                 "Diet Pepsi 0,5",
                 "Strawberry Donut",
@@ -37,14 +37,14 @@ class Test_MethodsShelf {
     }
 
     @Test
-    void test_isCharNotLetter() {
+    public void testIsCharNotLetter() {
         String text = "123";
 
         Assertions.assertTrue(MethodsShelf.isCharNotLetter(text));
     }
 
     @Test
-    void test_isSpaceSecond() {
+    public void testIsSpaceSecond() {
         String text = "1das5";
 
         Assertions.assertFalse(MethodsShelf.isSpaceSecond(text));
